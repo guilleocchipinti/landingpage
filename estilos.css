@@ -81,8 +81,9 @@ p{
     }
   }
   .btn{
-    width: 50%;
+    width: 40%;
    border: none;
+   align-items: center;
    cursor: pointer;
    color: #EAEAEA;
    background-color: #044D98;
