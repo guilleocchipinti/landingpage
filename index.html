@@ -30,37 +30,48 @@
 </header>
 
 <div class="container">
-    <div class="row">
-        <div class="caja-form col-md-7 col-lg-5">
-            <div class="p-2 mb-3">
-                <h1 class="display-3 fw-bold ">Vení a Toy Story Land</h1>
-                <p>Registrándote, puedes ser seleccionado para ser uno de los primeros en visitar las nuevas atracciones de Toy Story Land, en Disney World Orlando, Florida.</p>
-            </div>
-            <div class="custom-form mb-2 mb-5">
-                <form class="formulario d-flex flex-column">
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                    <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Fecha de nacimiento</label>
-                    <input type="date" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email</label>
-                    <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Confirmar Email</label>
-                    <input type="password" class="form-control form-control-sm" id="exampleInputPassword1">
-                </div>
-                <button type="submit" class="btn btn-primary align-center"> <a href="gracias.html">Registrarme</a></button>
-                </form>
-            </div>
-        </div>
+  <div class="row">
+    <div class="caja-form col-md-7 col-lg-5">
+      <div class="p-2 mb-3">
+        <h1 class="display-3 fw-bold rainbow-text">Vení a Toy Story Land</h1>
+        <p>Registrándote, puedes ser seleccionado para ser uno de los primeros en visitar las nuevas atracciones de Toy Story Land, en Disney World Orlando, Florida.</p>
+      </div>
+      <div class="custom-form mb-2 mb-5">
+        <form class="formulario d-flex flex-column">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" onfocus="changeLabelColor(this)" onblur="resetLabelColor(this)">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail2" class="form-label">Fecha de nacimiento</label>
+            <input type="date" class="form-control form-control-sm" id="exampleInputEmail2" aria-describedby="emailHelp" onfocus="changeLabelColor(this)" onblur="resetLabelColor(this)">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="name@example.com" onfocus="changeLabelColor(this)" onblur="resetLabelColor(this)">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Confirmar Email</label>
+            <input type="password" class="form-control form-control-sm" id="exampleInputPassword1" onfocus="changeLabelColor(this)" onblur="resetLabelColor(this)">
+          </div>
+          <button type="submit" class="btn btn-primary align-center"> <a href="gracias.html">Registrarme</a></button>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
 
+<script>
+  function changeLabelColor(input) {
+    const label = document.querySelector(`label[for="${input.id}"]`);
+    label.style.color = "#FFEE16"; 
+  }
+
+  function resetLabelColor(input) {
+    const label = document.querySelector(`label[for="${input.id}"]`);
+    label.style.color = ""; 
+  }
+</script>
 <footer class="fixed-bottom text-center">
     <p>&copy; 2023 Toy Story Land</p>
 </footer>

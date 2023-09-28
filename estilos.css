@@ -128,3 +128,55 @@ footer {
    }
 }
 
+  .rainbow-text {
+    animation: colorChange 4s linear infinite;
+  }
+
+  @keyframes colorChange {
+    0% {
+      color: #F1050C;
+    }
+    25% {
+      color: #FFEE16;
+    }
+    50% {
+      color: #9CE139;
+    }
+    75% {
+      color: #47A3FB;
+    }
+    100% {
+      color: #F1050C;
+    }
+  }
+
+  .custom-form {
+    transition: background-color 0.3s;
+  }
+
+  .formulario input:focus {
+    background-color: #9CE139; 
+  }
+
+  .rainbow-text {
+
+    animation: colorChange 4s linear infinite;
+  }
+
+  @keyframes colorChange {
+    0% {
+      color: #F1050C;
+    }
+    25% {
+      color: #FFEE16;
+    }
+    50% {
+      color: #9CE139;
+    }
+    75% {
+      color: #9CE139;
+    }
+    100% {
+      color: #F1050C;
+    }
+  }
