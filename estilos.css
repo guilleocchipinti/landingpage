@@ -11,7 +11,7 @@ body {
 p{
     color:aliceblue;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    font-size: medium;
+    font-size: larger;
 }
 .custom-form {
     width: 50%;
@@ -128,55 +128,78 @@ footer {
    }
 }
 
-  .rainbow-text {
-    animation: colorChange 4s linear infinite;
+  
+
+  .title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #FFEE16;
+    --color-2: #9CE139;
+    --color-3: #47A3FB;
+  }
+  
+  .title-word-2 {
+    --color-1: #9CE139;
+    --color-2: #F1050C;
+    --color-3: #FFEE16;
+  }
+  
+  .title-word-3 {
+    --color-1: #F1050C;
+    --color-2: #47A3FB;
+    --color-3: #9CE139;
+  }
+  
+  
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+
+  
+  .TSL{
+    display: grid;
+    place-items: center;  
+    text-align: center;
+    justify-content: start;
+  }
+  
+  .title {
+    font-family:  'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+    font-size:80%;
+    text-transform: uppercase;
   }
 
-  @keyframes colorChange {
-    0% {
-      color: #F1050C;
-    }
-    25% {
-      color: #FFEE16;
+  #bounce-logo {
+    position: relative;
+    animation: bounceAnimation 3s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  }
+  
+  @keyframes bounceAnimation {
+    0%, 100% {
+      transform: translateY(0); /* Sin cambio en la posición vertical al principio y al final */
     }
     50% {
-      color: #9CE139;
+      transform: translateY(-20px); /* Posición vertical ascendente */
     }
-    75% {
-      color: #47A3FB;
+    60% {
+      transform: translateY(-10px); /* Posición vertical descendente (rebote) */
     }
-    100% {
-      color: #F1050C;
+    70% {
+      transform: translateY(-20px); /* Posición vertical ascendente (segundo rebote) */
     }
-  }
-
-  .custom-form {
-    transition: background-color 0.3s;
-  }
-
-  .formulario input:focus {
-    background-color: #9CE139; 
-  }
-
-  .rainbow-text {
-
-    animation: colorChange 4s linear infinite;
-  }
-
-  @keyframes colorChange {
-    0% {
-      color: #F1050C;
-    }
-    25% {
-      color: #FFEE16;
-    }
-    50% {
-      color: #9CE139;
-    }
-    75% {
-      color: #9CE139;
-    }
-    100% {
-      color: #F1050C;
+    80%, 90% {
+      transform: translateY(0); /* Posición vertical al final (tercer rebote) */
     }
   }
+  
